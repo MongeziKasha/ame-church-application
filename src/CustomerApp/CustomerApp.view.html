@@ -1,11 +1,16 @@
 Customer Code: <input [(ngModel)]="CustomerModel.CustomerCode" type="text"><br/>
 Customer name: <input [(ngModel)]="CustomerModel.CustomerName" type="text"><br/>
-Customer Amount: <input [(ngModel)]="CustomerModel.CustomerAmount" type="text"><br/>
+Customer Amount: <input [(ngModel)]="CustomerModel.CustomerAmount" type="number"><br/>
 
 <input (click)="Add()" type="button" value="Add">
-{{CustomerModel.CustomerCode}}<br/>
-{{CustomerModel.CustomerName}}<br/>
-{{CustomerModel.CustomerAmount}}
+<br/>
+<div>
+    <strong>Current Customer:</strong>
+    {{CustomerModel.CustomerCode}}<br/>
+    {{CustomerModel.CustomerName}}<br/>
+    {{CustomerModel.CustomerAmount}}
+</div>
+
 
 <table>
     <tr>

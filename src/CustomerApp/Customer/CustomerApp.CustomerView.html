@@ -1,26 +1,41 @@
-Customer Code: <input [(ngModel)]="CustomerModel.CustomerCode" type="text"><br/>
-Customer name: <input [(ngModel)]="CustomerModel.CustomerName" type="text"><br/>
-Customer Amount: <input [(ngModel)]="CustomerModel.CustomerAmount" type="number"><br/>
+<form [formGroup] = "CustomerModel.formCustomerGroup">
+    Customer Code: <input formControlName ="CustomerCodeControl" type="text"><br/>
+    Customer name: <input formControlName ="CustomerNameControl" type="text"><br/>
+    Customer Amount: <input formControlName ="CustomerAmountControl" type="number"><br/>
+    
+    <input [disabled]="(!CustomerModel.formCustomerGroup.valid)" (click)="Add()" type="button" value="Add">
+    <br/>
+</form>
+    <!-- <div>
+        <strong>Current Customer:</strong>
+        {{CustomerModel.CustomerCode}}<br/>
+        {{CustomerModel.CustomerName}}<br/>
+        {{CustomerModel.CustomerAmount}}
+    </div> -->
+    <div *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!CustomerModel.formCustomerGroup.controls['CustomerCodeControl'].hasError('pattern')">
+        Customer code format incorrect
+    </div><br/>
+    
+    <div *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!CustomerModel.formCustomerGroup.controls['CustomerCodeControl'].hasError('required')">
+        Customer code required
+    </div><br/>
+    
+    <div *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!CustomerModel.formCustomerGroup.controls['CustomerNameControl'].hasError('required')">
+        Customer name required
+    </div>    
+    
+    
+    <table>
+        <tr>
+            <td>Customer code</td>
+            <td>Customer name</td>
+            <td>Customer amount</td>
+        </tr>
+        <tr *ngFor="let cust of CustomerModels">
+            <td>{{cust.CustomerCode}}</td>
+            <td>{{cust.CustomerName}}</td>
+            <td>{{cust.CustomerAmount}}</td>
+        </tr>
+    </table>
 
-<input (click)="Add()" type="button" value="Add">
-<br/>
-<div>
-    <strong>Current Customer:</strong>
-    {{CustomerModel.CustomerCode}}<br/>
-    {{CustomerModel.CustomerName}}<br/>
-    {{CustomerModel.CustomerAmount}}
-</div>
 
-
-<table>
-    <tr>
-        <td>Customer code</td>
-        <td>Customer name</td>
-        <td>Customer amount</td>
-    </tr>
-    <tr *ngFor="let cust of CustomerModels">
-        <td>{{cust.CustomerCode}}</td>
-        <td>{{cust.CustomerName}}</td>
-        <td>{{cust.CustomerAmount}}</td>
-    </tr>
-</table>

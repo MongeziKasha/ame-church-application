@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import{CommonModule} from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 @Component({
   templateUrl: './CustomerApp.HomeView.html',
-  // styleUrl: './app.component.css'
-  standalone:true,
-  imports: [FormsModule,CommonModule,BrowserModule]
+  standalone: true,
+  imports: [FormsModule, CommonModule]
 })
 export class HomeComponent {
-
-  }
+  // Component logic here
+}

@@ -1,12 +1,13 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { MasterComponent } from './CustomerApp/Home/CustomerApp.MasterComponent';
 import { importProvidersFrom } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainRoutes } from './CustomerApp/Routing/CustomerApp.MainRouting'; // Ensure this path is correct
 
 // Bootstrap the standalone component (MasterComponent)
 bootstrapApplication(MasterComponent, {
   providers: [
-    importProvidersFrom(BrowserModule, FormsModule, ReactiveFormsModule)
+    importProvidersFrom(FormsModule, ReactiveFormsModule, RouterModule.forRoot(MainRoutes)) // Remove BrowserModule
   ]
 }).catch(err => console.error(err));

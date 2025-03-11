@@ -1,12 +1,13 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { MasterComponent } from './CustomerApp/Home/CustomerApp.MasterComponent';
+import { importProvidersFrom } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainRoutes } from './CustomerApp/Routing/CustomerApp.MainRouting'; // Ensure this path is correct
 
-import { CustomerModule } from './CustomerApp/CustomerApp.module';
-// import { environment } from './environments/environment';
-
-// if (environment.production) {
-//   enableProdMode();
-// }
-
-platformBrowserDynamic().bootstrapModule(CustomerModule)
-  .catch(err => console.log(err));
+// Bootstrap the standalone component (MasterComponent)
+bootstrapApplication(MasterComponent, {
+  providers: [
+    importProvidersFrom(FormsModule, ReactiveFormsModule, RouterModule.forRoot(MainRoutes)) // Remove BrowserModule
+  ]
+}).catch(err => console.error(err));

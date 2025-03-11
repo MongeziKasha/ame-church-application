@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import{Customer} from "./CustomerApp.model";
+import{Customer} from "../Customer/CustomerApp.model";
 import{CommonModule} from '@angular/common';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './CustomerApp.view.html',
+  templateUrl: './CustomerApp.CustomerView.html',
   // styleUrl: './app.component.css'
   standalone:true,
   imports: [FormsModule,CommonModule]

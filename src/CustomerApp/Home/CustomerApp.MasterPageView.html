@@ -1,0 +1,21 @@
+<table style="background-color: white;border-color: gray;">
+  <tr style="align-self: center;">
+    <td colspan="2"><img src="https://www.questpond.com/img/logonew.png"/><br/></td>
+  </tr>
+  <tr style="border-color: grey;">
+    <td style="vertical-align: top;"><a [routerLink]="['/Home']" routerLinkActive="router-link-active">Home</a><br/>
+      <a [routerLink]="['/Customer']" routerLinkActive="router-link-active">Customer</a><br/>
+      <a [routerLink]="['/Supplier']" routerLinkActive="router-link-active">Supplier</a><br/>
+    </td>
+    <td>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </td>
+  </tr>
+  <tr style="border-color: grey;"><td colspan="23"></td></tr>
+  <tr style="align-self: center;">
+    <td colspan="2">&#64;Copyright Mongezi Kasha 2025</td>
+  </tr>
+
+</table>

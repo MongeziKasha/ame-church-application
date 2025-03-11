@@ -4,10 +4,12 @@ import { importProvidersFrom } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainRoutes } from './CustomerApp/Routing/CustomerApp.MainRouting'; // Ensure this path is correct
+import { BaseLogger, DbLogger } from './CustomerApp/Utility/CustomerApp.Logger';
 
 // Bootstrap the standalone component (MasterComponent)
 bootstrapApplication(MasterComponent, {
   providers: [
-    importProvidersFrom(FormsModule, ReactiveFormsModule, RouterModule.forRoot(MainRoutes)) // Remove BrowserModule
+    importProvidersFrom(FormsModule, ReactiveFormsModule, RouterModule.forRoot(MainRoutes)),
+    {provide:BaseLogger, useClass:DbLogger} // Remove BrowserModule
   ]
 }).catch(err => console.error(err));

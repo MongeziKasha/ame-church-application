@@ -6,6 +6,11 @@ export class BaseLogger implements ILogger{
         
     }
 }
+export interface Column {
+    CustomerCode: string;
+    CustomerName: string;
+    CustomerAmount: number;
+}
 export class ConsoleLogger extends BaseLogger{
    override Log():void{
         console.log("Using console logger");
@@ -22,3 +27,5 @@ export class FileLogger  extends BaseLogger{
         console.log("writing to afile");
     }
 }
+
+export type CustomerProperty = 'CustomerCode' | 'CustomerName' | 'CustomerAmount';

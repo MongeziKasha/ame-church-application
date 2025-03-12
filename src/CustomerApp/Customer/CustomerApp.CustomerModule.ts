@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import{MainRoutes} from '../Routing/CustomerApp.MainRouting';
+import{GridComponent} from '../Utility/CustomerApp.Grid.Component'
 
 bootstrapApplication(CustomerComponent, {
   providers: [

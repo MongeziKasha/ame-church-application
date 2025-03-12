@@ -1,7 +1,7 @@
 <form [formGroup] = "CustomerModel.formCustomerGroup">
     Customer Code: <input formControlName ="CustomerCodeControl" type="text"><br/>
     Customer name: <input formControlName ="CustomerNameControl" type="text"><br/>
-    Customer Amount: <input formControlName ="CustomerAmountControl" type="number"><br/>
+    Customer Amount: <input type="number"><br/>
     
     <input [disabled]="(!CustomerModel.formCustomerGroup.valid)" (click)="Add()" type="button" value="Add">
     <br/>
@@ -25,7 +25,8 @@
     </div>    
     
     
-<grid-ui grid-column=""
-grid-data="CustomerModels">
+<grid-ui [grid-column]="[{'colName':'CustomerName'}]"
+[grid-data]="CustomerModels"
+(grid-selected)="SelectCustomer($event)">
 </grid-ui>
 

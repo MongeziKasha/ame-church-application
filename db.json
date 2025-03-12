@@ -1,0 +1,76 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "CustomerCode": "C001",
+      "CustomerName": "John Doe",
+      "CustomerAmount": 1000
+    },
+    {
+      "id": 2,
+      "CustomerCode": "C002",
+      "CustomerName": "Jane Smith",
+      "CustomerAmount": 2000
+    },
+    {
+      "id": 3,
+      "CustomerCode": "D002",
+      "CustomerName": "Ane Smith",
+      "CustomerAmount": 1000
+    },
+    {
+      "id": "9db4",
+      "CustomerCode": "",
+      "CustomerName": "",
+      "CustomerAmount": 0
+    },
+    {
+      "id": "39bc",
+      "CustomerCode": "",
+      "CustomerName": "",
+      "CustomerAmount": 0
+    },
+    {
+      "id": "1109",
+      "CustomerCode": "",
+      "CustomerName": "",
+      "CustomerAmount": 0
+    },
+    {
+      "id": "7cc4",
+      "CustomerCode": "",
+      "CustomerName": "",
+      "CustomerAmount": 0
+    },
+    {
+      "id": "891d",
+      "CustomerCode": "",
+      "CustomerName": "",
+      "CustomerAmount": 0
+    },
+    {
+      "id": "c6a5",
+      "CustomerCode": "",
+      "CustomerName": "",
+      "CustomerAmount": 0
+    },
+    {
+      "id": "d7d6",
+      "CustomerCode": "",
+      "CustomerName": "",
+      "CustomerAmount": 0
+    },
+    {
+      "id": "b3fd",
+      "CustomerCode": "",
+      "CustomerName": "",
+      "CustomerAmount": 0
+    },
+    {
+      "id": "7190",
+      "CustomerCode": "",
+      "CustomerName": "",
+      "CustomerAmount": 0
+    }
+  ]
+}

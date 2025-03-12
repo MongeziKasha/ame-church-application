@@ -4,7 +4,7 @@
     Customer Amount: <input type="number"><br/>
     
     <input [disabled]="(!CustomerModel.formCustomerGroup.valid)" (click)="Add()" type="button" value="Add">
-    <br/>
+    <input [disabled]="Disable" type="button" value="send to server" (click)="postToServer()"/>
 </form>
     <!-- <div>
         <strong>Current Customer:</strong>
@@ -23,8 +23,6 @@
     <div *ngIf="CustomerModel.formCustomerGroup.dirty" [hidden]="!CustomerModel.formCustomerGroup.controls['CustomerNameControl'].hasError('required')">
         Customer name required
     </div>    
-    
-    
 <grid-ui [grid-column]="[{'colName':'CustomerName'}]"
 [grid-data]="CustomerModels"
 (grid-selected)="SelectCustomer($event)">

@@ -25,17 +25,7 @@
     </div>    
     
     
-    <table>
-        <tr>
-            <td>Customer code</td>
-            <td>Customer name</td>
-            <td>Customer amount</td>
-        </tr>
-        <tr *ngFor="let cust of CustomerModels">
-            <td>{{cust.CustomerCode}}</td>
-            <td>{{cust.CustomerName}}</td>
-            <td>{{cust.CustomerAmount}}</td>
-        </tr>
-    </table>
-
+<grid-ui grid-column=""
+grid-data="CustomerModels">
+</grid-ui>
 
